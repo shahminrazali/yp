@@ -45,7 +45,7 @@ def maxis_modem(phone,amount):
     print('Initializing modem...')
     print("ARGV: {0},RATE:{1}".format(PORT,BAUDRATE))
 
-    # logging.basicConfig(format='%(levelname)s: %(message)s', level=logging.DEBUG)
+    logging.basicConfig(format='%(levelname)s: %(message)s', level=logging.DEBUG)
     modem = GsmModem(PORT, BAUDRATE, smsReceivedCallbackFunc=handleSms)
     modem.smsTextMode = True
 
